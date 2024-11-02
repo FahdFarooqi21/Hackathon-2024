@@ -21,6 +21,11 @@
         // Add active-link class to the clicked link
         document.querySelector(`.section2 a[data-section="${sectionClass}"]`).classList.add('active-link');
     }
+
+    // Set default active section on page load
+    document.addEventListener("DOMContentLoaded", () => {
+        showSection('homepage');
+    });
   </script>
   <style>
     .login {
@@ -38,7 +43,7 @@
         text-decoration: none;
         padding: 5px 10px;
     }
-    .section2 a.active-link {
+    .section2 a:hover, .section2 a.active-link {
         border: 2px solid #FCF3E4;
         border-radius: 8px;
         padding: 5px 10px;
@@ -74,7 +79,7 @@
     <div class="row">
         <div class="col-sm-1"></div>
         <div class="col-sm-2" style="padding: 10px;">
-            <a href="#" data-section="homepage" onclick="event.preventDefault(); showSection('homepage')">HOMEPAGE</a>
+            <a href="#" data-section="homepage" class="active-link" onclick="event.preventDefault(); showSection('homepage')">HOMEPAGE</a>
         </div>
         <div class="col-sm-1"></div>
         <div class="col-sm-2" style="padding: 10px;">
@@ -98,19 +103,13 @@
     </div>
 
     <!-- Find Food -->
-    <div class="findfood" style="display: none;">
-        Search
-    </div>
+    <div class="findfood" style="display: none;">Search</div>
 
     <!-- Leaderboard -->
-    <div class="leaderboard" style="display: none;">
-        Leaderboard
-    </div>
+    <div class="leaderboard" style="display: none;">Leaderboard</div>
 
     <!-- About Us -->
-    <div class="aboutus" style="display: none;">
-        About Us
-    </div>
+    <div class="aboutus" style="display: none;">About Us</div>
   </div>
   
   <!-- Bootstrap JS and Popper.js (required for some Bootstrap components) -->
