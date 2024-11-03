@@ -61,10 +61,6 @@
     .mainBody .homepage {
         display: block;
     }
-    .findfood{
-            padding-left: 75px;
-            
-        }
 
         /* Filter Box Container */
         .filter-box {
@@ -74,6 +70,7 @@
             width: 250px;
             border-radius: 10px;
             font-size: 1rem;
+            min-height: 70vh;
         }
 
         /* Filter Title */
@@ -116,24 +113,23 @@
         line-height: 1.6;
         margin-bottom: 20px;
     }
-    .leaderboard 
-    {
+    .leaderboard {
         max-width: 800px;
         margin: 30px auto;
-        background-color: #FFFFFF;
+        background-color: #FCF3E4;
         padding: 20px;
         border-radius: 12px;
         box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-      }
+    }
 
-      .leaderboard .table {
+    .leaderboard .table {
         width: 100%;
         margin: 20px 0;
         border: 2px solid #301F10;
         background-color: #301F10;
         color: #301F10;
         border-collapse: collapse;
-      }
+    }
 
     .leaderboard .table thead th {
         background-color: #588c54;
@@ -164,7 +160,13 @@
 
   <!-- Section2 -->
   <div class="section2">
-    <br><br>
+    <div class="row">
+        <div class="col-sm-2">
+            <div class="col-sm-1" style="padding: 10px;">
+                <img src="Logo2.png" alt="Logo" class="navbar-logo" style="width: 100px; height: auto;">   
+            </div>
+        </div>
+    </div>
     <div class="row">
         <div class="col-sm-1"></div>
         <div class="col-sm-2" style="padding: 10px;">
@@ -218,31 +220,79 @@ space
     <!-- Find Food -->
     <div class="findfood" style="display: none;">
         Find Food
-        <div class="filter-box">
-            <h2>FILTERS</h2>
-            <div class="filter-option">
-                <input type="checkbox" id="distance">
-                <label for="distance">Distance</label>
+        <div class="row">
+            <div class="col-sm-2">
+                <div class="filter-box">
+                    <h2>FILTERS</h2>
+                    <div class="filter-option">
+                        <label for="distance">Distance</label>
+                        <select id="distance">
+                            <option value="0-0.5">0 - 0.5 miles</option>
+                            <option value="0.5-1">0.5 - 1 miles</option>
+                            <option value=">1">> 1 mile</option>
+                        </select>
+                        
+                    </div>
+                    <div class="filter-option">
+                        <input type="checkbox" id="halal">
+                        <label for="halal">Halal</label>
+                    </div>
+                    <div class="filter-option">
+                        <input type="checkbox" id="kosher">
+                        <label for="kosher">Kosher</label>
+                    </div>
+                    <div class="filter-option">
+                        <input type="checkbox" id="vegan">
+                        <label for="vegan">Vegetarian/Vegan</label>
+                    </div>
+                    <div class="filter-option">
+                        <input type="checkbox" id="gluten-free">
+                        <label for="gluten-free">Gluten Free</label>
+                    </div>
+                    <div class="filter-option">
+                        <input type="checkbox" id="nut-free">
+                        <label for="nut-free">Nut-Free</label>
+                    </div>
+                </div>
             </div>
-            <div class="filter-option">
-                <input type="checkbox" id="halal">
-                <label for="halal">Halal</label>
+            <div class="col-sm-1">
+
             </div>
-            <div class="filter-option">
-                <input type="checkbox" id="kosher">
-                <label for="kosher">Kosher</label>
-            </div>
-            <div class="filter-option">
-                <input type="checkbox" id="vegan">
-                <label for="vegan">Vegetarian/Vegan</label>
-            </div>
-            <div class="filter-option">
-                <input type="checkbox" id="gluten-free">
-                <label for="gluten-free">Gluten Free</label>
-            </div>
-            <div class="filter-option">
-                <input type="checkbox" id="nut-free">
-                <label for="nut-free">Nut-Free</label>
+            <div class="col-sm-9">
+                <div class="row">
+                    <div class="col-sm-3">
+                        <img src="item.jpg" alt="Logo" style="width: 300px; height: auto;"> 
+                    </div>
+                    <div class="col-sm-1">
+                    </div>
+                    <div class="col-sm-3">
+                        <img src="item.jpg" alt="Logo" style="width: 300px; height: auto;"> 
+                    </div>
+                    <div class="col-sm-1">
+                    </div>
+                    <div class="col-sm-3">
+                        <img src="item.jpg" alt="Logo" style="width: 300px; height: auto;"> 
+                    </div>
+                    <div class="col-sm-1">
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-sm-3">
+                        <img src="item.jpg" alt="Logo" style="width: 300px; height: auto;"> 
+                    </div>
+                    <div class="col-sm-1">
+                    </div>
+                    <div class="col-sm-3">
+                        <img src="item.jpg" alt="Logo" style="width: 300px; height: auto;"> 
+                    </div>
+                    <div class="col-sm-1">
+                    </div>
+                    <div class="col-sm-3">
+                        <img src="item.jpg" alt="Logo" style="width: 300px; height: auto;"> 
+                    </div>
+                    <div class="col-sm-1">
+                    </div>
+                </div>
             </div>
         </div>
     </div>
@@ -261,17 +311,17 @@ space
                 </thead>
                 <tbody>
                     <tr>
-                        <td>1 <span>🥇</span></td>
+                        <td>1</td>
                         <td>Jane Doe</td>
                         <td>57</td>
                     </tr>
                     <tr>
-                        <td>2 <span>🥈</span></td>
+                        <td>2</td>
                         <td>John Smith</td>
                         <td>49</td>
                     </tr>
                     <tr>
-                        <td>3 <span>🥉</span></td>
+                        <td>3</td>
                         <td>Amy Rose</td>
                         <td>45</td>
                     </tr>
