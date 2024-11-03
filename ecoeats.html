@@ -52,7 +52,6 @@
     .mainBody {
         background-color: #FCF3E4;
         color: #301F10;
-        font-size: 30px;
         min-height: 100vh;
     }
     .mainBody > div {
@@ -116,6 +115,39 @@
     .about-content p {
         line-height: 1.6;
         margin-bottom: 20px;
+    }
+    .leaderboard {
+        max-width: 800px;
+        margin: 30px auto;
+        background-color: #FCF3E4;
+        padding: 20px;
+        border-radius: 12px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    }
+
+    .leaderboard .table {
+        width: 100%;
+        margin: 20px 0;
+        border: 2px solid #301F10;
+        background-color: #301F10;
+        color: #301F10;
+        border-collapse: collapse;
+    }
+
+    .leaderboard .table thead th {
+        background-color: #588c54;
+        color: #FCF3E4;
+        padding: 10px;
+        border: 2px solid #301F10;
+    }
+
+    .leaderboard .table tbody td {
+        padding: 12px;
+        border: 2px solid #301F10;
+    }
+
+    .leaderboard .table tbody tr:nth-child(even) {
+        background-color: #588c54;
     }
   </style>
 </head>
@@ -215,7 +247,37 @@ space
     </div>
 
     <!-- Leaderboard -->
-    <div class="leaderboard" style="display: none;">Leaderboard</div>
+    <div class="leaderboard" style="display: none;">
+        <p>Check out the top contributors to EcoEats! Remember, the top 5 contributors at the end of this academic
+            year will win gift vouchers for the next one!</p>
+            <table class="table">
+                <thead>
+                    <tr>
+                        <th>Rank</th>
+                        <th>Name</th>
+                        <th>Points</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>1</td>
+                        <td>Jane Doe</td>
+                        <td>57</td>
+                    </tr>
+                    <tr>
+                        <td>2</td>
+                        <td>John Smith</td>
+                        <td>49</td>
+                    </tr>
+                    <tr>
+                        <td>3</td>
+                        <td>Amy Rose</td>
+                        <td>45</td>
+                    </tr>
+                </tbody>
+            </table>
+        
+    </div>
 
     <!-- About Us -->
     <div class="aboutus" style="display: none;">
